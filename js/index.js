@@ -5,6 +5,7 @@
 * OBS! All kommentering og variabelnavngiving er (selvfølgelig) gjort på engelsk.
 */
 
+
 /** 
 * Dette er menyen til Pippis Pizza. De numeriske verdiene representerer menyvalgene som brukeren kan taste inn i prompt. 
 * Implementer nå resten av funksjonaliteten basert på oppgaveteksten.
@@ -15,6 +16,7 @@ var menu = [
     "2 = Margarita",
     "3 = BBQ Grill"
 ];
+
 
 /**
 * Oppgave:
@@ -31,6 +33,7 @@ var menu = [
 * “Pizza <navn på pizza hentet fra meny-array> er på vei til postnummer <postnummer>”.
 */
 
+
 /**
 *
 * Baseline for zipcodes
@@ -38,6 +41,7 @@ var menu = [
 */
 var zipcodeStart = Number(1000);
 var zipcodeEnd   = Number(1999);
+
 
 /** 
 *
