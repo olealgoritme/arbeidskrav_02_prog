@@ -47,7 +47,7 @@ var zipcodeEnd   = Number(1999);
 * @return Boolean  				Returns true if the parameter is within range
 */
 function isWithinRange(zipcode) {
-    Number(zipcode);
+	Number(zipcode);
 	if(zipcode >= zipcodeStart && zipcode <= zipcodeEnd) return true; 
 	return false;
 }
