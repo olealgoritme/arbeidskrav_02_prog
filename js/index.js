@@ -47,8 +47,8 @@ var zipcodeEnd   = Number(1999);
 *
 * function that checks if zipcode is within the hardcoded zipcode range (zipcodeStart/End)
 *
-* @param  String   zipcode 		Zip code that will be checked
-* @return Boolean  	            Returns true if the parameter is within range
+* @param  String   zipcode      Zip code that will be checked
+* @return Boolean               Returns true if the parameter is within range
 */
 function isWithinRange(zipcode) {
 	Number(zipcode);
