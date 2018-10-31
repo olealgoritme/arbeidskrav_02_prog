@@ -120,7 +120,7 @@ function promptZipcode() {
         case ( !z.isWithinZipcodeRange() ) : alert(ALERT_MSG.INVALID_RANGE); init(); break;
         case ( z.isValidZipcode() && z.isWithinZipcodeRange() ) : promptProduct(); break;
         default: init(); break;
- 	}
+    }
 }
 
 
@@ -137,7 +137,7 @@ function promptProduct() {
         case ( !p.isValidProduct() ) : alert(ALERT_MSG.INVALID_PRODUCT); init(); break;
         case ( p.isValidProduct() ) : printConsole(); break;
         default: init(); break;
- 	}
+    }
 }
 
 
