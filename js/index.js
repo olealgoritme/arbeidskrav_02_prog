@@ -37,14 +37,15 @@ const ALERT_MSG = {
 	INVALID_ZIPCODE:    "Du har ikke gitt oss et korrekt postnummer. Postnummer baseres på 4 tegn med tall fra 0-9.",
 	INVALID_RANGE:      "Beklager, du er ikke i området hvor vi tilbyr gratis pizza.",
 	INVALID_PRODUCT:    "Beklager, produktnummeret du tastet inn eksisterer ikke.",
-	NO_INPUT:           "Du glemte å oppgi noe!"
+	NO_INPUT:           "Du glemte å oppgi noe!",
+    SUCCESS:            "Pizza NAME er på vei til postnummer ZIPCODE" 
 };
 
 
 const PROMPT_MSG = {
 	ZIPCODE:            "Hvilket postnummer bor du på? (Bor du på riktig sted får du GRATIS PIZZA!",
-	PRODUCT:            "Velg et produkt fra menyen [0-3]"
 };
+	PRODUCT:            "Velg et produkt fra menyen [0-3]"
 
 
 /**
@@ -125,7 +126,7 @@ function promptZipcode() {
 
 
 /*
- *  Prompts for product selection. Moves on to printConsole()
+ *  Prompts for product selection. Moves on to orderComplete()
  *  if all cases are met, Jumps to init() if cases are not met.
  */
 function promptProduct() {
@@ -135,20 +136,23 @@ function promptProduct() {
 
     switch(p !== null) {
         case ( !p.isValidProduct() ) : alert(ALERT_MSG.INVALID_PRODUCT); init(); break;
-        case ( p.isValidProduct() ) : printConsole(); break;
+        case ( p.isValidProduct() ) : orderComplete(); break;
         default: init(); break;
     }
 }
 
 
 /**
- * Console printer function
+ * Function that prints to console and shows alert about order details
  */
-function printConsole() {
+function orderComplete() {
+    var productName = menu[p.product].substring(4, menu[p.product].length);
+    var message = ALERT_MSG.SUCCESS.replace("NAME", productName).replace("ZIPCODE", z.zipcode);
     console.log("%c" + "RESULTAT FRA ARBEIDSKRAV 02", "background: #255; color: #FFFFFF");
     console.log("%c" + "-- kodet av Ole Algoritme (C) 2018", "background: #255; color: #FFFFFF");
     console.log("%c" + "_________________________________________________________________________________" + "\n", "color: #000000;");
-    console.log("Pizza - \"" + menu[p.product].substring(4, menu[p.product].length) + "\" er på vei til postnummer: " + z.zipcode);
+    console.log(message);
+    alert(message);
 }
 
 
