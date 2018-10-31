@@ -86,7 +86,7 @@ class Zipcode {
  */
 class Product {
     
-	constructor(product) {
+    constructor(product) {
         this.product = product;
 		this.menuItems = 4;
     }

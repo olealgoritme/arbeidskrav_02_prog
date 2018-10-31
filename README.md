@@ -1,3 +1,6 @@
+ARBEIDSKRAV 02 - PROGRAMMERING Javascript
+-------------------------------------------
+
 Oppgavetekst: Pippis Pizza
 
 Caset er Pippis Pizza som nå tilbyr gratis pizza til et utvalg av befolkningen! Ta utgangspunkt i koden
