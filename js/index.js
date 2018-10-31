@@ -43,7 +43,7 @@ const ALERT_MSG = {
 
 
 const PROMPT_MSG = {
-	ZIPCODE:            "Hvilket postnummer bor du på? (Bor du på riktig sted får du GRATIS PIZZA!",
+	ZIPCODE:            "Hvilket postnummer bor du på? (Bor du på riktig sted får du GRATIS PIZZA!)",
 };
 	PRODUCT:            "Velg et produkt fra menyen [0-3]"
 
@@ -113,7 +113,7 @@ function isNumber(input) {
  */
 function promptZipcode() {
     z = prompt(PROMPT_MSG.ZIPCODE);
-    if(z == null) alert(ALERT_MSG.NO_INPUT);
+    if(z === null || z === "") alert(ALERT_MSG.NO_INPUT); init();
     z = new Zipcode(z);
 
     switch(z !== null) {
@@ -131,7 +131,7 @@ function promptZipcode() {
  */
 function promptProduct() {
     p = prompt(PROMPT_MSG.PRODUCT + "\n\n" + menu);
-    if(p == null) alert(ALERT_MSG.NO_INPUT);
+    if(p === null || p === "") alert(ALERT_MSG.NO_INPUT); init();
     p = new Product(p);
 
     switch(p !== null) {
