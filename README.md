@@ -16,3 +16,7 @@ postnumrene 1000 og 1999 – ta i bruk prompt() for å spørre bruker hvilket me
 
 3. Gi beskjed til bruker via alert() når pizza er bestilt. Meldingen til bruker skal inneholde:
 “Pizza <navn på pizza hentet fra meny-array> er på vei til postnummer <postnummer>”.
+
+
+--------------------------------------------------------------------------------------------------
+Laget to løsningsvarianter i JS.
