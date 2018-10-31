@@ -34,16 +34,16 @@
 var z, p;
 
 const ALERT_MSG = {
-	INVALID_ZIPCODE:    "Du har ikke gitt oss et korrekt postnummer. Postnummer baseres på 4 tegn med tall fra 0-9.",
-	INVALID_RANGE:      "Beklager, du er ikke i området hvor vi tilbyr gratis pizza.",
-	INVALID_PRODUCT:    "Beklager, produktnummeret du tastet inn eksisterer ikke.",
-	NO_INPUT:           "Du glemte å oppgi noe!",
+    INVALID_ZIPCODE:    "Du har ikke gitt oss et korrekt postnummer. Postnummer baseres på 4 tegn med tall fra 0-9.",
+    INVALID_RANGE:      "Beklager, du er ikke i området hvor vi tilbyr gratis pizza.",
+    INVALID_PRODUCT:    "Beklager, produktnummeret du tastet inn eksisterer ikke.",
+    NO_INPUT:           "Du glemte å oppgi noe!",
     SUCCESS:            "Pizza NAME er på vei til postnummer ZIPCODE" 
 };
 
 
 const PROMPT_MSG = {
-	ZIPCODE:            "Hvilket postnummer bor du på? (Bor du på riktig sted får du GRATIS PIZZA!)",
+    ZIPCODE:            "Hvilket postnummer bor du på? (Bor du på riktig sted får du GRATIS PIZZA!)",
     PRODUCT:            "Velg et produkt fra menyen [0-3]"
 };
 
