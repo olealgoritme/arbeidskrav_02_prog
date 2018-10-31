@@ -86,7 +86,7 @@ class Zipcode {
  * Simple Product class
  */
 class Product {
-
+    
 	constructor(product) {
         this.product = product;
 		this.menuItems = 4;
@@ -121,8 +121,8 @@ function promptZipcode() {
 	z = new Zipcode(z);
 
 	switch(z !== null) {
-		case ( !z.isValidZipcode() )            				: alert(ALERT_MSG.INVALID_ZIPCODE); break;
-		case ( !z.isWithinZipcodeRange() )      				: alert(ALERT_MSG.INVALID_RANGE); break;
+		case ( !z.isValidZipcode() ) : alert(ALERT_MSG.INVALID_ZIPCODE); break;
+		case ( !z.isWithinZipcodeRange() ) : alert(ALERT_MSG.INVALID_RANGE); break;
 		case ( z.isValidZipcode() && z.isWithinZipcodeRange() ) : promptProduct(); break;
  	}
 }
@@ -138,8 +138,8 @@ function promptProduct() {
  	p = new Product(p);
 
  	switch(p !== null) {
-  	 	case ( !p.isValidProduct() ) 			    : alert(ALERT_MSG.INVALID_PRODUCT); break;
-		case ( !p.isOnMenu() )                      : alert(ALERT_MSG.INVALID_MENU_ENTRY); break;
+  	 	case ( !p.isValidProduct() ) : alert(ALERT_MSG.INVALID_PRODUCT); break;
+		case ( !p.isOnMenu() ) : alert(ALERT_MSG.INVALID_MENU_ENTRY); break;
 		case ( p.isValidProduct() && p.isOnMenu() ) : printConsole(); break;
  	}
 }
