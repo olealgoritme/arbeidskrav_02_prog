@@ -88,7 +88,7 @@ class Product {
     
     constructor(product) {
         this.product = product;
-		this.menuItems = 4;
+        this.menuItems = 4;
     }
 
     isValidProduct() {
