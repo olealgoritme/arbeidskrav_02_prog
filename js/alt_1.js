@@ -93,12 +93,9 @@ class Product {
     }
 
     isValidProduct() {
-        return (isNumber(this.product) && this.product < this.menuItems);
+        return (isNumber(this.product) && this.product >= 0 && this.product < this.menuItems);
     }
 
-    isOnMenu() {
-    	return (this.product >= 0 && this.product < this.menuItems);
-    }
 }
 
 
@@ -139,8 +136,7 @@ function promptProduct() {
 
  	switch(p !== null) {
   	 	case ( !p.isValidProduct() ) : alert(ALERT_MSG.INVALID_PRODUCT); break;
-		case ( !p.isOnMenu() ) : alert(ALERT_MSG.INVALID_MENU_ENTRY); break;
-		case ( p.isValidProduct() && p.isOnMenu() ) : printConsole(); break;
+		case ( p.isValidProduct() ) : printConsole(); break;
  	}
 }
 
