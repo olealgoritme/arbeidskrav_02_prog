@@ -59,7 +59,7 @@ var menu = [
 
 
 /**
- * Simple Zipcode class
+ * Simple Zipcode class with validation checks
  */
 class Zipcode {
 
@@ -74,7 +74,7 @@ class Zipcode {
     isValidZipcode() {
         return (isNumber(this.zipcode) && this.length === this.zipLen);
     }
-
+    
     isWithinZipcodeRange() {
     	return (this.zipcode >= this.zipcodeStart && this.zipcode <= this.zipcodeEnd);
     }
@@ -82,7 +82,7 @@ class Zipcode {
 
 
 /**
- * Simple Product class
+ * Simple Product class with validation checks
  */
 class Product {
     
@@ -94,7 +94,6 @@ class Product {
     isValidProduct() {
         return (isNumber(this.product) && this.product >= 0 && this.product < this.menuItems);
     }
-
 }
 
 
@@ -108,8 +107,8 @@ function isNumber(input) {
 
 
 /*
- *  Prompts for zip code. Moves on to Prompt for product selection
- *  if all cases are met
+ *  Prompts for zip code. Moves on to promptProduct() for product selection
+ *  if all cases are met. Jumps to init() if cases are not met.
  */
 function promptZipcode() {
 	z = prompt(PROMPT_MSG.ZIPCODE);
@@ -117,16 +116,17 @@ function promptZipcode() {
 	z = new Zipcode(z);
 
 	switch(z !== null) {
-		case ( !z.isValidZipcode() ) : alert(ALERT_MSG.INVALID_ZIPCODE); break;
-		case ( !z.isWithinZipcodeRange() ) : alert(ALERT_MSG.INVALID_RANGE); break;
+		case ( !z.isValidZipcode() ) : alert(ALERT_MSG.INVALID_ZIPCODE); init(); break;
+		case ( !z.isWithinZipcodeRange() ) : alert(ALERT_MSG.INVALID_RANGE); init(); break;
 		case ( z.isValidZipcode() && z.isWithinZipcodeRange() ) : promptProduct(); break;
+        default: init(); break;
  	}
 }
 
 
 /*
- *  Prompts for zip code. Moves on to Prompt for product selection
- *  if all cases are met
+ *  Prompts for product selection. Moves on to printConsole()
+ *  if all cases are met, Jumps to init() if cases are not met.
  */
 function promptProduct() {
 	p = prompt(PROMPT_MSG.PRODUCT + "\n\n" + menu);
@@ -134,8 +134,9 @@ function promptProduct() {
  	p = new Product(p);
 
  	switch(p !== null) {
-  	 	case ( !p.isValidProduct() ) : alert(ALERT_MSG.INVALID_PRODUCT); break;
+  	 	case ( !p.isValidProduct() ) : alert(ALERT_MSG.INVALID_PRODUCT); init(); break;
 		case ( p.isValidProduct() ) : printConsole(); break;
+        default: init(); break;
  	}
 }
 
@@ -152,8 +153,20 @@ function printConsole() {
 
 
 /**
- * Starts prompt functions to get user input of zip code and product selected.
- * Does a (lot of) validation checking on the inputs.
+ * Resets variables (not really necessary, but showing for code clarity)
+ * Initializes prompt functions to get user input of zip code and product selected.
+ * Code does a (lot of) validation checking on the inputs.
  */
+function init() {
+    // Resets variables
+    z = null;
+    p = null;
 
-promptZipcode();
+    // Starts with zip code, and iterates through the functions
+    // when all criterias are met
+    promptZipcode();
+}
+
+
+// Starting point
+init();
