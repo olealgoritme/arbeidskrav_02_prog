@@ -111,11 +111,11 @@ function isNumber(input) {
  *  if all cases are met. Jumps to init() if cases are not met.
  */
 function promptZipcode() {
-	z = prompt(PROMPT_MSG.ZIPCODE);
-	if(z == null) alert(ALERT_MSG.NO_INPUT);
-	z = new Zipcode(z);
+    z = prompt(PROMPT_MSG.ZIPCODE);
+    if(z == null) alert(ALERT_MSG.NO_INPUT);
+    z = new Zipcode(z);
 
-	switch(z !== null) {
+    switch(z !== null) {
         case ( !z.isValidZipcode() ) : alert(ALERT_MSG.INVALID_ZIPCODE); init(); break;
         case ( !z.isWithinZipcodeRange() ) : alert(ALERT_MSG.INVALID_RANGE); init(); break;
         case ( z.isValidZipcode() && z.isWithinZipcodeRange() ) : promptProduct(); break;
@@ -129,11 +129,11 @@ function promptZipcode() {
  *  if all cases are met, Jumps to init() if cases are not met.
  */
 function promptProduct() {
-	p = prompt(PROMPT_MSG.PRODUCT + "\n\n" + menu);
- 	if(p == null) alert(ALERT_MSG.NO_INPUT);
- 	p = new Product(p);
+    p = prompt(PROMPT_MSG.PRODUCT + "\n\n" + menu);
+    if(p == null) alert(ALERT_MSG.NO_INPUT);
+    p = new Product(p);
 
- 	switch(p !== null) {
+    switch(p !== null) {
         case ( !p.isValidProduct() ) : alert(ALERT_MSG.INVALID_PRODUCT); init(); break;
         case ( p.isValidProduct() ) : printConsole(); break;
         default: init(); break;
