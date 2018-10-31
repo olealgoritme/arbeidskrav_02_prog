@@ -44,8 +44,9 @@ const ALERT_MSG = {
 
 const PROMPT_MSG = {
 	ZIPCODE:            "Hvilket postnummer bor du på? (Bor du på riktig sted får du GRATIS PIZZA!)",
+    PRODUCT:            "Velg et produkt fra menyen [0-3]"
 };
-	PRODUCT:            "Velg et produkt fra menyen [0-3]"
+
 
 
 /**
