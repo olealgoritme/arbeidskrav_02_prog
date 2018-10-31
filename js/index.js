@@ -145,10 +145,10 @@ function promptProduct() {
  * Console printer function
  */
 function printConsole() {
-	console.log("%c" + "RESULTAT FRA ARBEIDSKRAV 02", "background: #255; color: #FFFFFF");
-	console.log("%c" + "-- kodet av Ole Algoritme (C) 2018", "background: #255; color: #FFFFFF");
-	console.log("%c" + "_________________________________________________________________________________" + "\n", "color: #000000;");
-	console.log("Pizza - \"" + menu[p.product].substring(4, menu[p.product].length) + "\" er på vei til postnummer: " + z.zipcode);
+    console.log("%c" + "RESULTAT FRA ARBEIDSKRAV 02", "background: #255; color: #FFFFFF");
+    console.log("%c" + "-- kodet av Ole Algoritme (C) 2018", "background: #255; color: #FFFFFF");
+    console.log("%c" + "_________________________________________________________________________________" + "\n", "color: #000000;");
+    console.log("Pizza - \"" + menu[p.product].substring(4, menu[p.product].length) + "\" er på vei til postnummer: " + z.zipcode);
 }
 
 
