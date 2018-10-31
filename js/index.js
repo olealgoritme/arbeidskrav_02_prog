@@ -116,9 +116,9 @@ function promptZipcode() {
 	z = new Zipcode(z);
 
 	switch(z !== null) {
-		case ( !z.isValidZipcode() ) : alert(ALERT_MSG.INVALID_ZIPCODE); init(); break;
-		case ( !z.isWithinZipcodeRange() ) : alert(ALERT_MSG.INVALID_RANGE); init(); break;
-		case ( z.isValidZipcode() && z.isWithinZipcodeRange() ) : promptProduct(); break;
+        case ( !z.isValidZipcode() ) : alert(ALERT_MSG.INVALID_ZIPCODE); init(); break;
+        case ( !z.isWithinZipcodeRange() ) : alert(ALERT_MSG.INVALID_RANGE); init(); break;
+        case ( z.isValidZipcode() && z.isWithinZipcodeRange() ) : promptProduct(); break;
         default: init(); break;
  	}
 }
@@ -134,8 +134,8 @@ function promptProduct() {
  	p = new Product(p);
 
  	switch(p !== null) {
-  	 	case ( !p.isValidProduct() ) : alert(ALERT_MSG.INVALID_PRODUCT); init(); break;
-		case ( p.isValidProduct() ) : printConsole(); break;
+        case ( !p.isValidProduct() ) : alert(ALERT_MSG.INVALID_PRODUCT); init(); break;
+        case ( p.isValidProduct() ) : printConsole(); break;
         default: init(); break;
  	}
 }
