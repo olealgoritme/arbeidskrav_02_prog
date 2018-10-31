@@ -36,8 +36,7 @@ var z, p;
 const ALERT_MSG = {
 	INVALID_ZIPCODE:    "Du har ikke gitt oss et korrekt postnummer. Postnummer baseres på 4 tegn med tall fra 0-9.",
 	INVALID_RANGE:      "Beklager, du er ikke i området hvor vi tilbyr gratis pizza.",
-	INVALID_PRODUCT:    "Beklager, produktnummeret du tastet inn er feil.",
-	INVALID_MENU_ENTRY: "Beklager, produktnummeret du tastet inn er ikke på menyen.",
+	INVALID_PRODUCT:    "Beklager, produktnummeret du tastet inn eksisterer ikke.",
 	NO_INPUT:           "Du glemte å oppgi noe!"
 };
 
