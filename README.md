@@ -22,4 +22,6 @@ postnumrene 1000 og 1999 – ta i bruk prompt() for å spørre bruker hvilket me
 
 
 --------------------------------------------------------------------------------------------------
-Laget to løsningsvarianter i JS.
+Løsningsforslag til Arbeidskrav 02 i Programmering (Javascript)
+laget av: Ole Algoritme, Oktober 2018.
+git: https://github.com/olealgoritme/arbeidskrav_02_prog.git
